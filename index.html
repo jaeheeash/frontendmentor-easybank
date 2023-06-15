@@ -24,6 +24,12 @@
 <body>
 
   <header class = "header">
+    <!-- popup when you click mobile hamburger -->
+    <div class="overlay">
+
+      
+
+    </div>
     <!-- helper class flex -->
     <nav class = "flex flex-jc-sb flex-ai-c">
       <a href = "/" class = "header__logo">
@@ -31,7 +37,9 @@
       </a>
 
       <!-- spans are for the hamburger menu, only visible on mobile -->
-      <a href = "#" class = "header__menu hide-for-desktop">
+      <!-- open is temporary since we don't want it to be open all the time (only when click) -->
+      <!-- must use javascript too allow this (use id for consistency?) -->
+      <a id = "btnHamburger" href = "#" class = "header__menu hide-for-desktop">
         <span></span>
         <span></span>
         <span></span>
@@ -53,7 +61,7 @@
     </nav>
   </header>
 
-  <!-- 
+
 
   Request Invite
 
@@ -131,7 +139,7 @@
     Coded by <a href="#">Your Name Here</a>.
   </div>
 
--->
+
 
   <script src = "/app/js/script.js"></script>
 </body>
