@@ -1,0 +1,58 @@
+.header {
+    nav {
+        padding: 1.0265rem 1.5rem;
+    }
+    
+    &__logo {
+
+        img {
+            width: 8.8215rem;
+            height: 1.375rem;
+        }
+
+    }
+
+    &__menu { // Mobile Menu
+        
+        > span { // selector for direct child? new to me
+            display: block;
+            width: 26px;
+            height: 2px;
+            background-color: $darkBlue;
+
+            &:not(:last-child) {
+                margin-bottom: 3px;
+            }
+        }
+    }
+
+    &__links { // DeskTop Link
+        a {
+            position: relative;
+            font-size: $font-sm;
+            transition: color 300ms ease-in-out;
+            &:not(:last-child) {
+                margin-right: 32px;
+            }
+
+            &::before {
+                content: "";
+                background: linear-gradient(to right, $limeGreen, $brightCyan);
+                position: absolute;
+                height: 5px;
+                left: 0;
+                right: 0;
+                bottom: -29px;
+                opacity: 0;
+                transition: opacity 300ms ease-in-out;
+            }
+
+            &:hover {
+                color: $darkBlue;
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
